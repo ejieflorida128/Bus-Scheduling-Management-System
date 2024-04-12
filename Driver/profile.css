@@ -1,0 +1,164 @@
+.card{
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+    width: 1000px;
+    height: 500px;
+    position:relative;
+    left: -170px;
+    top: -140px;
+    
+}
+
+
+.forProfile .profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+    position: absolute;
+    left: 30px;
+}
+
+.forProfile .license{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+    position: absolute;
+    left: 200px;
+}
+.title h3{
+    margin-left: 450px;
+    margin-top: 30px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+.forFullname{
+    position:relative;
+    left: 400px;
+}
+
+.forFullname label{
+    color: rgb(65, 60, 60);
+    margin-left: -229px;
+    margin-top: 10px;
+}
+.forFullname input{
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+label{
+    font-weight: bold;
+}
+
+.forAge input{
+    width: 120px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+.forAge{
+    position: absolute;
+    top: 102px;
+    left: 720px;
+}
+
+.forAge label{
+    margin-left: -65px;
+}
+
+.forSex select{
+    width: 130px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+.forSex{
+    position: absolute;
+    top: 101px;
+    left: 850px;
+}
+.forSex label{
+    margin-left: -100px;
+}
+
+.forGmail input{
+    width: 400px;
+    margin-left: 30px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+.forGmail label{
+    margin-left: -320px;
+    margin-top: 20px;
+}
+.forPassword{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.forPassword label{
+    margin-left: -221px;
+}
+.forPassword input{
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+.forBirthday{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.forBirthday input{
+    width: 215px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+.forBus{
+    margin-left: 30px;
+}
+.forBus input{
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+.forBus label{
+    margin-left: -370px;
+    margin-top: 25px;
+}
+
+.forAddress {
+    margin-left: 15px;
+} 
+.forAddress label{
+    margin-top:25px;
+    margin-left: -465px;
+}
+.buttons{
+    position: absolute;
+    bottom: 40px;
+    margin-left: 30px;
+}
+
+#accountDeletion{
+    margin-top: 10px;
+    margin-left: 40px;
+    width: 300px;
+}
+
+.buttons button{
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+
+
+.forAddress textarea{
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+.buttons label{
+    margin-top:50px;
+    box-shadow: 0 4px 8px rgba(4, 4, 4, 1.1);
+}
+
+.buttons{
+    margin-top: 20px;
+}

@@ -17,16 +17,20 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $query = mysqli_query($conn,$selectAllFromDriver);
 
             $checker = 0;
+            
+            $id = null;
 
             while($check = mysqli_fetch_assoc($query)){
                   if($check['gmail'] == $gmail){
                     if($check['password'] == $password){
                         $checker = 1;
+                        $id = $check['id'];
                     }
                   }
             }
 
             if($checker == 1){
+                $_SESSION['id'] = $id;
                   header('Location: Driver/dashboard.php');
             }else{
               $showModal = true;
@@ -40,13 +44,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
             while($check = mysqli_fetch_assoc($query)){
                   if($check['gmail'] == $gmail){
+                    
                     if($check['password'] == $password){
+                        $id = $check['id'];
                         $checker = 1;
                     }
                   }
             }
 
             if($checker == 1){
+                $_SESSION['id'] = $id;
                   header('Location: Passenger/dashboard.php');
             }else{
               $showModal = true;

@@ -35,12 +35,13 @@
                                   if($checkValue == 0){
                                     $fullname = 'Please put a data information..';
                                     $address = 'Please put a data information..';
-                                    $license = '../license/images.jpg';
+                                    $license = '../license/default.jpg';
                                     $sex =   'Please select gender..';
-                                    $birthday =  'Please put a data information..';
+                                    
                                     $defaultProfile = "../profile_pictures/default.jpg";
+                                    $bus = "Please add bus information..";
 
-                                    $sql = "INSERT INTO driver_account (fullname,gmail,password,address,license,sex,profile_picture,birthday) VALUES ('$fullname','$gmail','$password','$address','$license','$sex','$defaultProfile','$birthday')";
+                                    $sql = "INSERT INTO driver_account (fullname,gmail,age,password,address,license,sex,profile_picture,bus) VALUES ('$fullname','$gmail','0','$password','$address','$license','$sex','$defaultProfile','$bus')";
                                         mysqli_query($conn,$sql);                                    
                                       header("Location: index.php");              
                                   }else{
@@ -82,10 +83,12 @@
                                     $fullname = 'Please put a data information..';
                                     $address = 'Please put a data information..';
                                     $sex =   'Please select gender..';
-                                    $birthday =  'Please put a data information..';
+                                   
                                     $defaultProfile = "../profile_pictures/default.jpg";
+                                    $defaultId = "../ids/default.jpg"
+                                    $defaultContact = "0000-000-0000";
 
-                                    $sql = "INSERT INTO passenger_account (fullname,gmail,password,address,profile_picture,sex,birthday) VALUES ('$fullname','$gmail','$password','$address','$defaultProfile','$sex','$birthday')";
+                                    $sql = "INSERT INTO passenger_account (fullname,gmail,password,address,profile_picture,sex,national_id,contact) VALUES ('$fullname','$gmail','$password','$address','$defaultProfile','$sex','$defaultId',$defaultContact)";
                                         mysqli_query($conn,$sql);                                    
                                       header("Location: index.php");              
                                   }else{

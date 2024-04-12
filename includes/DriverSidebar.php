@@ -36,6 +36,7 @@ body{
   height: 100%;
   background-color: #fff;
   transition: all .5s ease;
+  z-index: 10;
 }
 .sidebar header{
   font-size: 28px;
@@ -203,7 +204,7 @@ p {
         <i class="fas fa-qrcode"></i>
         <span>Dashboard</span>
       </a>
-      <a href="#">
+      <a href="profile.php">
       <i class='bx bxs-user'></i>
         <span>Profile</span>
       </a>
