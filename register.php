@@ -85,10 +85,10 @@
                                     $sex =   'Please select gender..';
                                    
                                     $defaultProfile = "../profile_pictures/default.jpg";
-                                    $defaultId = "../ids/default.jpg"
+                                    $defaultId = "../ids/default.jpg";
                                     $defaultContact = "0000-000-0000";
 
-                                    $sql = "INSERT INTO passenger_account (fullname,gmail,password,address,profile_picture,sex,national_id,contact) VALUES ('$fullname','$gmail','$password','$address','$defaultProfile','$sex','$defaultId',$defaultContact)";
+                                    $sql = "INSERT INTO `passenger_account` (fullname,gmail,password,address,profile_picture,sex,national_id,contact) VALUES ('$fullname','$gmail','$password','$address','$defaultProfile','$sex','$defaultId','$defaultContact')";
                                         mysqli_query($conn,$sql);                                    
                                       header("Location: index.php");              
                                   }else{
