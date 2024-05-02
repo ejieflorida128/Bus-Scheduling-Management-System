@@ -200,23 +200,23 @@ p {
     </label>
     <div class="sidebar">
       <header>Menu</header>
-      <a href="#" class="active">
+      <a href="../Driver/dashboard.php" class="active">
         <i class="fas fa-qrcode"></i>
         <span>Dashboard</span>
       </a>
-      <a href="profile.php">
+      <a href="../Driver/profile.php">
       <i class='bx bxs-user'></i>
         <span>Profile</span>
       </a>
-      <a href="#">
+      <a href="../Driver/myschedule.php">
       <i class='bx bxs-calendar'></i>
         <span>My schedule</span>
       </a>
-      <a href="#">
+      <a href="../Driver/busschedule.php">
         <i class='bx bxs-bus-school'></i>
-        <span>Bus Schedules</span>
+        <span>Other Sched</span>
       </a>
-      <a href="#">
+      <a href="../Driver/report.php">
       <i class='bx bxl-blogger'></i>
         <span>Reports</span>
       </a>

@@ -25,12 +25,21 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                     if($check['password'] == $password){
                         $checker = 1;
                         $id = $check['id'];
+                        $fullname  = $check['fullname'];
+                        $age = $check['age'];
+                        $sex = $check['sex'];
+                        $busName = $check['bus'];
                     }
                   }
             }
 
             if($checker == 1){
                 $_SESSION['id'] = $id;
+                $_SESSION['fullname'] = $fullname;
+                $_SESSION['age'] = $age;
+                $_SESSION['sex'] = $sex;
+                $_SESSION['bus'] = $busName;
+               
                   header('Location: Driver/dashboard.php');
             }else{
               $showModal = true;
@@ -47,6 +56,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                     
                     if($check['password'] == $password){
                         $id = $check['id'];
+                        $fullname  = $check['fullname'];
+                        $address = $check['address'];
+                        $profile_pic = $check['profile_picture'];
+                        $profile_id = $check['national_id'];
+                        $contact = $check['contact'];
                         $checker = 1;
                     }
                   }
@@ -54,6 +68,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
             if($checker == 1){
                 $_SESSION['id'] = $id;
+                $_SESSION['fullname'] = $fullname;
+                $_SESSION['address'] = $address;
+                $_SESSION['profile_picture'] = $profile_pic;
+                $_SESSION['national_id'] = $profile_id;
+                $_SESSION['contact'] = $contact;
+
                   header('Location: Passenger/dashboard.php');
             }else{
               $showModal = true;

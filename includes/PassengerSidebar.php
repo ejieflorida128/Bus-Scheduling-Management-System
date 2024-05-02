@@ -57,6 +57,7 @@ body{
   border-left: 5px solid transparent;
   font-family: 'Lato', sans-serif;
   transition: all .5s ease;
+  text-decoration: none;
 }
 a.active,a:hover{
   border-left: 5px solid var(--accent-color);
@@ -129,6 +130,7 @@ label #cancel{
   }
   .sidebar a{
     height: 60px;
+    text-decoration: none;
   }
   .sidebar a i{
     margin-left: -10px;
@@ -193,7 +195,7 @@ p {
     </label>
     <div class="sidebar">
       <header>Menu</header>
-      <a href="#" class="active">
+      <a href="../Passenger/dashboard.php" class="active">
         <i class="fas fa-qrcode"></i>
         <span>Dashboard</span>
       </a>
@@ -201,15 +203,15 @@ p {
       <i class='bx bxs-user'></i>
         <span>Profile</span>
       </a>
-      <a href="#">
+      <a href="../Passenger/schedule.php">
       <i class='bx bxs-calendar'></i>
         <span>Schedule</span>
       </a>
-      <a href="#">
+      <a href="../Passenger/buslist.php">
         <i class='bx bxs-bus-school'></i>
         <span>Bus List</span>
       </a>
-      <a href="#">
+      <a href="../Passenger/buslogs.php">
       <i class='bx bxl-blogger'></i>
         <span>Bus Logs</span>
       </a>
