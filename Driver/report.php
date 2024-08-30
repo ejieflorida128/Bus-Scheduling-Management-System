@@ -1,7 +1,7 @@
 <?php
 session_start();
      include('../connnection/conn.php');
-     include('../includes/PassengerSidebar.php');
+     include('../includes/DriverSidebar.php');
 
 
   
@@ -34,6 +34,7 @@ session_start();
                     <h1 class="modal-title fs-5" id="exampleModalLabel">System Notice</h1>
                   
                 </div>
+                
                 <div class="modal-body">
                   
                                 <label for="maxPassenger" style = "position: absolute; left: 0px; margin: 5px; margin-left: 20px;">Target Passenger Count: </label>
@@ -104,7 +105,7 @@ session_start();
 
                     $driver = $_SESSION['id'];
 
-                                $sqlfoRAllSchedule = "SELECT * FROM report ";
+                                $sqlfoRAllSchedule = "SELECT * FROM report WHERE driver_id = $driver";
                                 $query = mysqli_query($conn,$sqlfoRAllSchedule);
 
                                 $count = 1;

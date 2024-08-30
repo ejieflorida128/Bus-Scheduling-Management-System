@@ -1,6 +1,7 @@
 <?php
-include('connnection/conn.php');
 session_start();
+include('connnection/conn.php');
+
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
      $option = $_POST['option'];

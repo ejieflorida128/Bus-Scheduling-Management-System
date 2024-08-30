@@ -5,8 +5,10 @@ include('../connnection/conn.php');
 
 $reporter = $_SESSION['fullname'];
 $report = $_POST['reportMessage'];
+$driver_id = $_POST['driver_id'];
+$busname = $_POST['busname'];
 
-$message = "INSERT INTO report (report,reporter) VALUES ('$report','$reporter')";
+$message = "INSERT INTO report (report,reporter,driver_id,bus_name) VALUES ('$report','$reporter','$driver_id','$busname')";
 mysqli_query($conn,$message);
 
 $modalForSuccessReport = true;

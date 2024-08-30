@@ -19,6 +19,7 @@
 <div class="frame">
         <div class="container">     
                 <div class="section1">
+                        <a href="profile.php" style = "text-decoration: none;   color: rgb(77, 72, 72); ">
                         <div class="box">
                             <div class="title">
                                     Profile
@@ -29,9 +30,11 @@
                             <div class="des">
                                 Click here to proceed to profile..
                             </div>
+</a>
                         </div>
 
                         <div class="box">
+                                <a href="schedule.php" style = "text-decoration: none;   color: rgb(77, 72, 72); ">
                             <div class="title">
                                     Bus Schedules
                             </div>
@@ -41,10 +44,12 @@
                             <div class="des">
                             Click here to proceed to bus schedule..
                             </div>
+</a>
                         </div>
                 </div>
                 <div class="section2">
                 <div class="box">
+                        <a href="buslist.php" style = "text-decoration: none;   color: rgb(77, 72, 72); ">
                             <div class="title">
                                     Bus List
                             </div>
@@ -54,9 +59,11 @@
                             <div class="des">
                             Click here to proceed to my bus list..
                             </div>
+</a>
                         </div>
 
                         <div class="box">
+                                <a href="buslogs.php" style = "text-decoration: none;   color: rgb(77, 72, 72); ">
                             <div class="title">
                                     Bus Logs
                             </div>
@@ -66,6 +73,7 @@
                             <div class="des">
                             Click here to proceed to bus logs..
                             </div>
+</a>
                         </div>
                 </div>
         </div>

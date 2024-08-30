@@ -21,7 +21,8 @@
         <div class="container">     
                 <div class="section1">
                         <div class="box">
-                            <div class="title">
+                           <a href="profile.php" style = "text-decoration: none;   color: rgb(77, 72, 72); ">
+                           <div class="title">
                                     Profile
                             </div>
                             <div class="icon">
@@ -30,9 +31,11 @@
                             <div class="des">
                                 Click here to proceed to profile..
                             </div>
+                           </a>
                         </div>
 
                         <div class="box">
+                                <a href="myschedule.php" style = "text-decoration: none;   color: rgb(77, 72, 72); "> 
                             <div class="title">
                                     My Schedule
                             </div>
@@ -42,10 +45,12 @@
                             <div class="des">
                             Click here to proceed to my schedule..
                             </div>
+                                </a>
                         </div>
                 </div>
                 <div class="section2">
                 <div class="box">
+                        <a href="busschedule.php" style = "text-decoration: none;   color: rgb(77, 72, 72); ">
                             <div class="title">
                                     Bus Schedules
                             </div>
@@ -55,9 +60,11 @@
                             <div class="des">
                             Click here to proceed to my bus schedules..
                             </div>
+                                </a>
                         </div>
 
                         <div class="box">
+                                <a href="report.php" style = "text-decoration: none;   color: rgb(77, 72, 72); ">
                             <div class="title">
                                     Reports
                             </div>
@@ -67,6 +74,7 @@
                             <div class="des">
                             Click here to proceed to reports..
                             </div>
+                                </a>
                         </div>
                 </div>
         </div>

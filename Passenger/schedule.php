@@ -106,7 +106,7 @@ session_start();
 
                     $driver = $_SESSION['id'];
 
-                                $sqlfoRAllSchedule = "SELECT * FROM booked";
+                                $sqlfoRAllSchedule = "SELECT * FROM booked WHERE passenger_id = $driver";
                                 $query = mysqli_query($conn,$sqlfoRAllSchedule);
 
                                 $count = 1;

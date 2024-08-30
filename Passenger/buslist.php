@@ -16,8 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $sqlInsertIntoSchedule = "INSERT INTO schedules (driver_id,max_passenger,driver_name,driver_age,driver_sex,bus_name,date,time) VALUES ('$driverId','$max','$fullname','$age','$sex','$bus','$date','$time')";
     mysqli_query($conn,$sqlInsertIntoSchedule);
 
-
-  
     $successModal = true;
 }
 ?>
@@ -56,6 +54,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
                 while($check = mysqli_fetch_assoc($QueryForBusList)){
                     $id = $check['id'];
+                    $driver_id = $check['driver_id'];
                     // Calculate remaining seats
                     $sqlForGettingRemainingSeats = "SELECT booked_ticket,max_passenger FROM schedules WHERE id = $id";
                     $queryForBooked = mysqli_query($conn,$sqlForGettingRemainingSeats);
@@ -80,30 +79,32 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                         </div>
                         <p class="card-text" style="font-size: 14px; font-weight: bold; color: black;"><?php echo $check['date']."\n\n\n".$check['time'] ?></p>
                             <div class="DIV" style = "display: flex; margin-left: 18px;">
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" style = "margin: 2px;">
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal_<?php echo $id ?>" style = "margin: 2px;">
                             REPORT
                         </button>
                         
                                 <!-- Modal -->
                                 <form action="report.php" method = "post">
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">System notice!</h1>
-                                       
+                                    <input type="text" name = "driver_id" value = "<?php echo $driver_id ?>" hidden>
+                                    <input type="text" name = "busname" value = "<?php echo $check['bus_name'] ?>" hidden>
+
+                                    <div class="modal fade" id="exampleModal_<?php echo $id ?>" tabindex="-1" aria-labelledby="exampleModalLabel_<?php echo $id ?>" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel_<?php echo $id ?>">System notice!</h1>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <label for="reportMessage" style = "position: absolute; left: 55px;">Please input your Report Message here: </label>
+                                                    <textarea name="reportMessage" id="reportMessage" cols="50" rows="14" style = "margin-top: 25px; padding: 5px;"></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                    <input type="submit" value = "Send Report" class = "btn btn-success">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                                <label for="reportMessage" style = "position: absolute; left: 55px;">Please input your Report Message here: </label>
-                                                <textarea name="reportMessage" id="reportMessage" cols="50" rows="14" style = "margin-top: 25px; padding: 5px;"></textarea>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                        <input type="submit" value = "Send Report" class = "btn btn-success">
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
                                 </form>
                         <a href="booked.php?id=<?php echo $check['id'] ?>" class="<?php echo $buttonClass; ?>" style = "margin: 2px;"><?php echo $buttonText; ?></a>
                             </div>
